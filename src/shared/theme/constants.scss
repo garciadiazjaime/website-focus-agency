@@ -1,0 +1,34 @@
+@import './helpers';
+@import './mixins';
+@import './sprite';
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+
+$white: #fff;
+$black: #000;
+$darkGray: #222222;
+$gray: #6d6e71;
+
+$color1:  #035BD9;  // blue
+$color2: #00CB86;   // green
+$color3: #4D4D4D;   // gray
+$color4: #F3FAFF;   // light
+
+$fontA: 'Open Sans', sans-serif;
+
+$isLaptop: "only screen and (min-width: 1024px)";
+$isTablet: "only screen and (min-width: 768px) and (max-width: 1023px)";
+$isPhone: "only screen and (max-width: 767px)";
+
+$title: 40px;
+$subtitle: 30px;
+$normal: 17px;
+
+$font1: 'Montserrat', sans-serif;
+$font2: 'Open Sans', sans-serif;
+
+$semibold: 600;
+$bold: 700;
+
+$padding1: 40px 0;

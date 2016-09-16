@@ -1,0 +1,50 @@
+@import '../../../../theme/constants';
+
+.block2 {
+  padding: $padding1;
+
+  .iconBase {
+    margin-top: 200px;
+    @extend .vCenter;
+    @extend .icon-sprites;
+    top: -10%;
+    left: 37%;
+  }
+
+  .icon1 {
+    @extend .iconBase;
+    @include sprite($sprites-Focus-icon-focusgroups);
+  }
+
+  .icon2 {
+    @extend .iconBase;
+    @include sprite($sprites-Focus-icon-apoyologistico);
+  }
+
+  .title {
+    color: $color2;
+    font-size: $subtitle;
+    font-family: $font2;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    position: absolute;
+    line-height: $subtitle;
+  }
+
+  .icon3 {
+    position: absolute;
+    top: 70%;
+    left: 49%;
+
+    svg {
+      width: 20px;
+      height: 20px;
+
+      polyline {
+        stroke: $color2;
+        stroke-width: 2;
+      }
+    }
+  }
+}

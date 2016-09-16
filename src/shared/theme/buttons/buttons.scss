@@ -1,0 +1,39 @@
+.buttonBase1 {
+  display: inline-block;
+  color: $white;
+  font-family: $font2;
+  font-size: $normal;
+
+  svg {
+    position: relative;
+    stroke-width: 3px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.button1 {
+  @extend .buttonBase1;
+  background: $color1;
+  padding: 8px 60px 8px 40px;
+
+  svg {
+    left: 65%;
+  }
+}
+
+.button2 {
+  @extend .buttonBase1;
+  background: $color2;
+  padding: 8px 70px 8px 25px;
+
+  svg {
+    left: 20%;
+
+    polyline {
+      stroke: $color1;
+    }
+  }
+}

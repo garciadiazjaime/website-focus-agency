@@ -1,0 +1,27 @@
+@import "../constants";
+
+.title1 {
+  color: $color2;
+  font-size: $title;
+  font-family: $fontA;
+  font-weight: $semibold;
+}
+
+.title5 {
+  color: $white;
+  font-size: $subtitle;
+  line-height: $subtitle;
+  font-family: $font2;
+}
+
+.title6 {
+  color: $black;
+  font-size: $normal;
+  font-family: $font2;
+}
+
+.title7 {
+  color: $white;
+  font-size: $normal;
+  font-family: $font2;
+}
