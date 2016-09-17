@@ -1,0 +1,30 @@
+@import '../constants';
+
+.iconBase1 {
+  @extend .vCenter;
+  @extend .icon-sprites;
+}
+
+.icon1 {
+  @extend .iconBase1;
+  @include sprite($sprites-pregunta);
+}
+
+.icon2 {
+  @extend .iconBase1;
+  @include sprite($sprites-Focus-icon-focusgroups);
+}
+
+.icon3 {
+  @extend .iconBase1;
+  @include sprite($sprites-Focus-icon-apoyologistico);
+}
+
+.icon4 {
+
+}
+
+.icon5 {
+  @extend .iconBase1;
+  @include sprite($sprites-Focus-icon-somos);
+}

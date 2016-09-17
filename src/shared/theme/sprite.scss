@@ -1,6 +1,7 @@
-$sprites-Focus-icon-apoyologistico: -0px -100px 140px 118px;
-$sprites-Focus-icon-focusgroups: -140px -100px 140px 118px;
-$sprites-pregunta: -0px -218px 81px 93px;
+$sprites-Focus-icon-apoyologistico: -320px -0px 140px 118px;
+$sprites-Focus-icon-focusgroups: -0px -219px 140px 118px;
+$sprites-Focus-icon-somos: -0px -100px 239px 119px;
+$sprites-pregunta: -320px -118px 81px 93px;
 $sprites-brand: -0px -0px 320px 100px;
 @mixin sprite-width($sprite) {
   width: nth($sprite, 3);

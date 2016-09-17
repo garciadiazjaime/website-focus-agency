@@ -1,5 +1,7 @@
 @import "../constants";
 
+// Font: Open Sans
+
 .title1 {
   color: $color2;
   font-size: $title;
@@ -24,4 +26,19 @@
   color: $white;
   font-size: $normal;
   font-family: $font2;
+}
+
+.title9 {
+  color: $white;
+  font-size: $normal;
+  font-family: $font2;
+  line-height: $normal;
+}
+
+// Font: Montserrat
+
+.title8 {
+  color: $color1;
+  font-size: $subtitle;
+  font-family: $font1;
 }
