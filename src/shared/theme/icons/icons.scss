@@ -23,3 +23,8 @@
 .icon4 {
 
 }
+
+.icon5 {
+  @extend .iconBase1;
+  @include sprite($sprites-Focus-icon-somos);
+}
