@@ -1,8 +1,20 @@
-$sprites-Focus-icon-apoyologistico: -320px -0px 140px 118px;
-$sprites-Focus-icon-focusgroups: -320px -118px 140px 118px;
+$sprites-Focus-icon-apoyologistico: -648px -118px 140px 118px;
+$sprites-Focus-icon-focusgroups: -648px -0px 140px 118px;
 $sprites-Focus-icon-somos: -0px -100px 239px 119px;
 $sprites-Focus-logo-focusvision: -0px -219px 277px 67px;
-$sprites-pregunta: -239px -100px 81px 93px;
+$sprites-icono-areavidiro: -320px -105px 164px 105px;
+$sprites-icono-coffeebreak: -0px -286px 164px 105px;
+$sprites-icono-comodo: -164px -286px 164px 105px;
+$sprites-icono-entrega: -484px -0px 164px 105px;
+$sprites-icono-gesellmesa: -484px -105px 164px 105px;
+$sprites-icono-incentivos: -320px -0px 164px 105px;
+$sprites-icono-recepcion: -0px -391px 164px 105px;
+$sprites-icono-salaespera: -164px -391px 164px 105px;
+$sprites-icono-traduccion: -328px -391px 164px 105px;
+$sprites-icono-traduccion2: -0px -496px 164px 105px;
+$sprites-icono-transmisionvivo: -164px -496px 164px 105px;
+$sprites-icono-ubicacion: -484px -210px 164px 105px;
+$sprites-pregunta: -648px -236px 81px 93px;
 $sprites-brand: -0px -0px 320px 100px;
 @mixin sprite-width($sprite) {
   width: nth($sprite, 3);

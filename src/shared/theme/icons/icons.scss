@@ -33,3 +33,67 @@
   @extend .iconBase1;
   @include sprite($sprites-Focus-logo-focusvision);
 }
+
+// focus groupos > instalaciones
+
+.icon6 {
+  @extend .iconBase1;
+  @include sprite($sprites-icono-salaespera);
+}
+
+.icon7 {
+  @extend .iconBase1;
+  @include sprite($sprites-icono-gesellmesa);
+}
+
+.icon8 {
+  @extend .iconBase1;
+  @include sprite($sprites-icono-areavidiro);
+}
+
+.icon9 {
+  @extend .iconBase1;
+  @include sprite($sprites-icono-comodo);
+}
+
+.icon10 {
+  @extend .iconBase1;
+  @include sprite($sprites-icono-traduccion);
+}
+
+.icon11 {
+  @extend .iconBase1;
+  @include sprite($sprites-icono-ubicacion);
+}
+
+// focus groupos > Servicios Complementarios
+
+.icon12 {
+  @extend .iconBase1;
+  @include sprite($sprites-icono-recepcion);
+}
+
+.icon13 {
+  @extend .iconBase1;
+  @include sprite($sprites-icono-coffeebreak);
+}
+
+.icon14 {
+  @extend .iconBase1;
+  @include sprite($sprites-icono-transmisionvivo);
+}
+
+.icon15 {
+  @extend .iconBase1;
+  @include sprite($sprites-icono-traduccion2);
+}
+
+.icon16 {
+  @extend .iconBase1;
+  @include sprite($sprites-icono-incentivos);
+}
+
+.icon17 {
+  @extend .iconBase1;
+  @include sprite($sprites-icono-entrega);
+}
