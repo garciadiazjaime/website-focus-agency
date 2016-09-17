@@ -28,3 +28,8 @@
   @extend .iconBase1;
   @include sprite($sprites-Focus-icon-somos);
 }
+
+.icon6 {
+  @extend .iconBase1;
+  @include sprite($sprites-Focus-logo-focusvision);
+}
