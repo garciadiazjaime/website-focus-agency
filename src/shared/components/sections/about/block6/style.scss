@@ -1,3 +1,31 @@
-.block6 {
+@import '../../../../theme/constants';
+@import '../../../../theme/titles/titles';
 
+.block6 {
+  padding: $padding2;
+
+  // carousel
+
+  .item {
+    height: 82px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #fff;
+  }
+
+  .controls {
+    background-image: none;
+    top: 50%;
+
+    svg {
+      polyline {
+        stroke: $white;
+      }
+    }
+  }
+
+  // slider
+  .slider {
+    padding: $padding2;
+  }
 }
