@@ -47,7 +47,7 @@ export default class Block4 extends React.Component {
             </div>
           </div>
           <div className="col-sm-4">
-            <div className={style.icon6} />
+            <div className={style.icon18} />
             <div className={style.title6}>
               <p>
                 Somos parte de la selección de Focus

@@ -29,12 +29,14 @@
   @include sprite($sprites-Focus-icon-somos);
 }
 
-.icon6 {
+// focus groups
+
+.icon18 {
   @extend .iconBase1;
-  @include sprite($sprites-Focus-logo-focusvision);
+  @include sprite($sprites-focus-logo-focusvision);
 }
 
-// focus groupos > instalaciones
+// focus groups > instalaciones
 
 .icon6 {
   @extend .iconBase1;
@@ -66,7 +68,9 @@
   @include sprite($sprites-icono-ubicacion);
 }
 
-// focus groupos > Servicios Complementarios
+
+
+// focus groups > Servicios Complementarios
 
 .icon12 {
   @extend .iconBase1;
