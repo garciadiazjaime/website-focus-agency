@@ -1,0 +1,103 @@
+@import '../constants';
+
+.iconBase1 {
+  @extend .vCenter;
+  @extend .icon-sprites;
+}
+
+.icon1 {
+  @extend .iconBase1;
+  @include sprite($sprites-pregunta);
+}
+
+.icon2 {
+  @extend .iconBase1;
+  @include sprite($sprites-Focus-icon-focusgroups);
+}
+
+.icon3 {
+  @extend .iconBase1;
+  @include sprite($sprites-Focus-icon-apoyologistico);
+}
+
+.icon4 {
+
+}
+
+.icon5 {
+  @extend .iconBase1;
+  @include sprite($sprites-Focus-icon-somos);
+}
+
+// focus groups
+
+.icon18 {
+  @extend .iconBase1;
+  @include sprite($sprites-focus-logo-focusvision);
+}
+
+// focus groups > instalaciones
+
+.icon6 {
+  @extend .iconBase1;
+  @include sprite($sprites-icono-salaespera);
+}
+
+.icon7 {
+  @extend .iconBase1;
+  @include sprite($sprites-icono-gesellmesa);
+}
+
+.icon8 {
+  @extend .iconBase1;
+  @include sprite($sprites-icono-areavidiro);
+}
+
+.icon9 {
+  @extend .iconBase1;
+  @include sprite($sprites-icono-comodo);
+}
+
+.icon10 {
+  @extend .iconBase1;
+  @include sprite($sprites-icono-traduccion);
+}
+
+.icon11 {
+  @extend .iconBase1;
+  @include sprite($sprites-icono-ubicacion);
+}
+
+
+
+// focus groups > Servicios Complementarios
+
+.icon12 {
+  @extend .iconBase1;
+  @include sprite($sprites-icono-recepcion);
+}
+
+.icon13 {
+  @extend .iconBase1;
+  @include sprite($sprites-icono-coffeebreak);
+}
+
+.icon14 {
+  @extend .iconBase1;
+  @include sprite($sprites-icono-transmisionvivo);
+}
+
+.icon15 {
+  @extend .iconBase1;
+  @include sprite($sprites-icono-traduccion2);
+}
+
+.icon16 {
+  @extend .iconBase1;
+  @include sprite($sprites-icono-incentivos);
+}
+
+.icon17 {
+  @extend .iconBase1;
+  @include sprite($sprites-icono-entrega);
+}

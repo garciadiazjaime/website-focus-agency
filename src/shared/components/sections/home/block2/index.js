@@ -10,21 +10,21 @@ export default class Block2 extends React.Component {
         <div className="row">
           <div className="col-sm-6">
             <img src="/images/home/Focus-FocusGroups-portada.png" className="img-responsive" />
-            <div className={style.icon1} />
+            <div className={style.icon2} />
             <div className={style.title}>
               FOCUS GROUPS <br />
             </div>
-            <div className={style.icon3}>
+            <div className={style.icon4}>
               <SVG network="arrow_right" />
             </div>
           </div>
           <div className="col-sm-6">
             <img src="/images/home/Focus-ApoyoLogistico-portada.png" className="img-responsive" />
-            <div className={style.icon2} />
+            <div className={style.icon3} />
             <div className={style.title}>
               APOYO LOGÍSTICO <br /> DE CAMPO
             </div>
-            <div className={style.icon3}>
+            <div className={style.icon4}>
               <SVG network="arrow_right" />
             </div>
           </div>

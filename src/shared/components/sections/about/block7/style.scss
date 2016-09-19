@@ -1,0 +1,27 @@
+@import '../../../../theme/constants';
+@import '../../../../theme/titles/titles';
+@import '../../../../theme/buttons/buttons';
+
+.block7 {
+
+  .title6 {
+    padding-top: 23px;
+
+    p {
+      padding-top: 15px;
+    }
+
+    a {
+      margin-top: 50px;
+    }
+
+    svg {
+      left: 45px;
+
+      polyline {
+        stroke: #fff;
+        stroke-width: 1px;
+      }
+    }
+  }
+}

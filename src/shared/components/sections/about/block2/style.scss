@@ -1,0 +1,18 @@
+@import '../../../../theme/constants';
+@import '../../../../theme/titles/titles';
+@import '../../../../theme/icons/icons';
+
+.block2 {
+  padding: $padding2;
+
+  .icon5 {
+    left: 35%;
+    top: 50px;
+  }
+
+  .title8 {
+    width: 100%;
+    text-align: center;
+    margin-top: 150px;
+  }
+}
