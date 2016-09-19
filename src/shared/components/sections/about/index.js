@@ -7,7 +7,7 @@ import Block4 from './block4';
 import Block5 from './block5';
 import Block6 from './block6';
 import Block7 from './block7';
-import Block8 from './block8';
+import Block8 from '../home/block3';
 import Block9 from './block9';
 
 export default class AboutSection extends React.Component {
