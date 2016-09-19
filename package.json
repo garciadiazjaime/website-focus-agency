@@ -18,7 +18,8 @@
     "assets": "cp -rf ./build/. ./static/ && rm ./static/index.html",
     "minify-css": "./node_modules/.bin/gulp minify-css",
     "minify-js": "./node_modules/.bin/gulp minify-js",
-    "minify": "npm run minify-css && npm run minify-js"
+    "minify": "npm run minify-css && npm run minify-js",
+    "install": "rm rf ./node_modules && npm cache clean && npm i"
   },
   "author": "Mint IT Media",
   "license": "ISC",
@@ -79,6 +80,7 @@
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-router": "^1.0.3",
+    "react-slick": "^0.14.4",
     "react-tap-event-plugin": "^0.2.2",
     "readable-stream": "^2.0.5",
     "rest": "^1.3.1",

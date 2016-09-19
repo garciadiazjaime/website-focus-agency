@@ -7,8 +7,8 @@ import Block4 from './block4';
 import Block5 from './block5';
 import Block6 from './block6';
 import Block7 from './block7';
-import Block8 from './block8';
-import Block9 from './block9';
+import Block8 from '../home/block3';
+import Block9 from '../home/block4';
 
 export default class ServicesSection extends React.Component {
   render() {
