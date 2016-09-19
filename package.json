@@ -19,7 +19,7 @@
     "minify-css": "./node_modules/.bin/gulp minify-css",
     "minify-js": "./node_modules/.bin/gulp minify-js",
     "minify": "npm run minify-css && npm run minify-js",
-    "install": "rm rf ./node_modules && npm cache clean && npm i"
+    "clean-installation": "rm rf ./node_modules && npm cache clean && npm i"
   },
   "author": "Mint IT Media",
   "license": "ISC",
