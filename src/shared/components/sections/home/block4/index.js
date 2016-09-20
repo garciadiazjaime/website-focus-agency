@@ -27,7 +27,7 @@ export default class Block4 extends React.Component {
         <div className="row">
           <div className="col-sm-6">
             <div className={style.title7}>
-              <b>Tijuana</b>
+              Tijuana
               <br />
               Santa María #2841 Col. América Tijuana B.C. <br />
               22044 (664) 634 2930 y (664) 634 2815 <br />
@@ -36,7 +36,7 @@ export default class Block4 extends React.Component {
           </div>
           <div className="col-sm-6">
             <div className={style.title7}>
-              <b>Mexicali</b>
+              Mexicali
               <br />
               Cetys Universidad Campus Mexicali Despacho #8010 <br />
               (686) 554 3347 y (686) 552 3345 <br />

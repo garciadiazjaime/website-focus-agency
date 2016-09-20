@@ -6,7 +6,7 @@ $background-color: $white;
 // - links -
 $link-color: $gray;
 $hover-color: $darkGray!important;
-$active: $black;
+$active: $color2;
 // - social media
 $sm-background: $gray;
 $sm-background-hover: $darkGray;
@@ -66,13 +66,23 @@ $hamburger-background: darken($white, 10%)!important;
   >li{
     height: $height;
   }
+  li.active {
+    a {
+      color: $active;
+      border-left-color: $active;
+      border-right-color: $active;
+      z-index: 1000;
+    }
+  }
 }
 .navbarNavAnchor {
-  font-family: $fontA;
+  font-family: $font1;
   font-weight: 300;
-  padding-top: 0!important;
-  padding-bottom: 0!important;
-  font-size: 14px;
+  border-left: 1px solid $color1;
+  margin-left: -1px;
+  padding-top: 13px!important;
+  padding-bottom: 13px!important;
+  font-size: 17px;
   color: $color1;
   text-transform: uppercase;
   @extend .vCenter;
