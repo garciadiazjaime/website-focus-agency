@@ -151,12 +151,20 @@
 .style__navbarNav___1r3v1 > li {
   height: 100px; }
 
+.style__navbarNav___1r3v1 li.style__active___10rjM a {
+  color: #00CB86;
+  border-left-color: #00CB86;
+  border-right-color: #00CB86;
+  z-index: 1000; }
+
 .style__navbarNavAnchor___37QYF {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 300;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-  font-size: 14px;
+  border-left: 1px solid #035BD9;
+  margin-left: -1px;
+  padding-top: 13px !important;
+  padding-bottom: 13px !important;
+  font-size: 17px;
   color: #035BD9;
   text-transform: uppercase; }
   .style__navbarNavAnchor___37QYF:hover, .style__navbarNavAnchor___37QYF:focus {
@@ -452,17 +460,18 @@
   color: #fff;
   font-size: 30px;
   line-height: 30px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Montserrat", sans-serif; }
 
 .style__title6___2x7FO {
   color: #000;
   font-size: 17px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  opacity: .5; }
 
 .style__title7___1Pacu {
   color: #fff;
   font-size: 17px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Montserrat", sans-serif; }
 
 .style__title9___3oCLz {
   color: #fff;
@@ -1062,7 +1071,7 @@
   .style__block2___yxSll .style__title___2JfTK {
     color: #00CB86;
     font-size: 30px;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
     width: 100%;
     text-align: center;
     top: 50%;
@@ -1141,12 +1150,17 @@
 
 .style__button1___32jzC, .style__submit___3y4I1 {
   background: #035BD9;
+  font-family: "Montserrat", sans-serif;
   padding: 8px 60px 8px 40px; }
   .style__button1___32jzC svg, .style__submit___3y4I1 svg {
     left: 65%; }
+  .style__button1___32jzC:hover, .style__submit___3y4I1:hover {
+    color: #fff;
+    background: #0366f2; }
 
 .style__button2___1eTIn {
   background: #00CB86;
+  font-family: "Montserrat", sans-serif;
   padding: 8px 70px 8px 25px; }
   .style__button2___1eTIn svg {
     left: 20%; }
@@ -1209,17 +1223,18 @@
   color: #fff;
   font-size: 30px;
   line-height: 30px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Montserrat", sans-serif; }
 
 .style__title6___3mcUZ {
   color: #000;
   font-size: 17px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  opacity: .5; }
 
 .style__title7___2tYLY {
   color: #fff;
   font-size: 17px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Montserrat", sans-serif; }
 
 .style__title9___2ZmTr {
   color: #fff;
@@ -1363,17 +1378,18 @@
   color: #fff;
   font-size: 30px;
   line-height: 30px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Montserrat", sans-serif; }
 
 .style__title6___8k-iy {
   color: #000;
   font-size: 17px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  opacity: .5; }
 
 .style__title7___3kWyz {
   color: #fff;
   font-size: 17px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Montserrat", sans-serif; }
 
 .style__title9___2eqlu {
   color: #fff;
@@ -1499,17 +1515,18 @@
   color: #fff;
   font-size: 30px;
   line-height: 30px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Montserrat", sans-serif; }
 
 .style__title6___G7Bi3 {
   color: #000;
   font-size: 17px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  opacity: .5; }
 
 .style__title7___18HEf {
   color: #fff;
   font-size: 17px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Montserrat", sans-serif; }
 
 .style__title9___3NVGB {
   color: #fff;
@@ -1541,12 +1558,17 @@
 
 .style__button1___1hNj- {
   background: #035BD9;
+  font-family: "Montserrat", sans-serif;
   padding: 8px 60px 8px 40px; }
   .style__button1___1hNj- svg {
     left: 65%; }
+  .style__button1___1hNj-:hover {
+    color: #fff;
+    background: #0366f2; }
 
 .style__button2___1PxHI {
   background: #00CB86;
+  font-family: "Montserrat", sans-serif;
   padding: 8px 70px 8px 25px; }
   .style__button2___1PxHI svg {
     left: 20%; }
@@ -1558,7 +1580,8 @@
   background: #035BD9; }
   .style__block4___3PLzc .style__title5___T2PV8 {
     text-align: center;
-    padding: 40px 0; }
+    padding: 40px 0;
+    font-family: "Open Sans", sans-serif; }
   .style__block4___3PLzc .style__cta___1iNEx {
     width: 100%;
     text-align: center; }
@@ -1668,17 +1691,18 @@
   color: #fff;
   font-size: 30px;
   line-height: 30px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Montserrat", sans-serif; }
 
 .style__title6___1f8k8 {
   color: #000;
   font-size: 17px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  opacity: .5; }
 
 .style__title7___m0eLI {
   color: #fff;
   font-size: 17px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Montserrat", sans-serif; }
 
 .style__title9___2lnyn {
   color: #fff;
@@ -2344,17 +2368,18 @@
   color: #fff;
   font-size: 30px;
   line-height: 30px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Montserrat", sans-serif; }
 
 .style__title6___2E_cG {
   color: #000;
   font-size: 17px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  opacity: .5; }
 
 .style__title7___21JO_ {
   color: #fff;
   font-size: 17px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Montserrat", sans-serif; }
 
 .style__title9___1XDH4 {
   color: #fff;
@@ -2747,17 +2772,18 @@
   color: #fff;
   font-size: 30px;
   line-height: 30px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Montserrat", sans-serif; }
 
 .style__title6___3ZgkO {
   color: #000;
   font-size: 17px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  opacity: .5; }
 
 .style__title7___3fXSj {
   color: #fff;
   font-size: 17px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Montserrat", sans-serif; }
 
 .style__title9___bvzMX {
   color: #fff;
@@ -3222,17 +3248,18 @@
   color: #fff;
   font-size: 30px;
   line-height: 30px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Montserrat", sans-serif; }
 
 .style__title6___eDkzQ {
   color: #000;
   font-size: 17px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  opacity: .5; }
 
 .style__title7___1eGbP {
   color: #fff;
   font-size: 17px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Montserrat", sans-serif; }
 
 .style__title9___3IKbC {
   color: #fff;
@@ -3708,17 +3735,18 @@
   color: #fff;
   font-size: 30px;
   line-height: 30px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Montserrat", sans-serif; }
 
 .style__title6___N7pUo {
   color: #000;
   font-size: 17px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  opacity: .5; }
 
 .style__title7___VqQ4U {
   color: #fff;
   font-size: 17px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Montserrat", sans-serif; }
 
 .style__title9___iJFPc {
   color: #fff;
@@ -4012,12 +4040,17 @@
 
 .style__button1___9YZAe {
   background: #035BD9;
+  font-family: "Montserrat", sans-serif;
   padding: 8px 60px 8px 40px; }
   .style__button1___9YZAe svg {
     left: 65%; }
+  .style__button1___9YZAe:hover {
+    color: #fff;
+    background: #0366f2; }
 
 .style__button2___Uj5BF {
   background: #00CB86;
+  font-family: "Montserrat", sans-serif;
   padding: 8px 70px 8px 25px; }
   .style__button2___Uj5BF svg {
     left: 20%; }
@@ -4151,17 +4184,18 @@
   color: #fff;
   font-size: 30px;
   line-height: 30px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Montserrat", sans-serif; }
 
 .style__title6___2EAqO {
   color: #000;
   font-size: 17px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  opacity: .5; }
 
 .style__title7___1GO6U {
   color: #fff;
   font-size: 17px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Montserrat", sans-serif; }
 
 .style__title9___2pEDf {
   color: #fff;
@@ -4356,17 +4390,18 @@
   color: #fff;
   font-size: 30px;
   line-height: 30px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Montserrat", sans-serif; }
 
 .style__title6___3Jlc3 {
   color: #000;
   font-size: 17px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  opacity: .5; }
 
 .style__title7___1VsjO {
   color: #fff;
   font-size: 17px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Montserrat", sans-serif; }
 
 .style__title9___28hRl {
   color: #fff;
@@ -4398,12 +4433,17 @@
 
 .style__button1___2lmPw {
   background: #035BD9;
+  font-family: "Montserrat", sans-serif;
   padding: 8px 60px 8px 40px; }
   .style__button1___2lmPw svg {
     left: 65%; }
+  .style__button1___2lmPw:hover {
+    color: #fff;
+    background: #0366f2; }
 
 .style__button2___1v8SZ {
   background: #00CB86;
+  font-family: "Montserrat", sans-serif;
   padding: 8px 70px 8px 25px; }
   .style__button2___1v8SZ svg {
     left: 20%; }
@@ -4786,17 +4826,18 @@
   color: #fff;
   font-size: 30px;
   line-height: 30px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Montserrat", sans-serif; }
 
 .style__title6___2wgMr {
   color: #000;
   font-size: 17px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  opacity: .5; }
 
 .style__title7___36iEP {
   color: #fff;
   font-size: 17px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Montserrat", sans-serif; }
 
 .style__title9___31Q2e {
   color: #fff;
@@ -5193,17 +5234,18 @@
   color: #fff;
   font-size: 30px;
   line-height: 30px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Montserrat", sans-serif; }
 
 .style__title6___31YeL {
   color: #000;
   font-size: 17px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  opacity: .5; }
 
 .style__title7___2ByrJ {
   color: #fff;
   font-size: 17px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Montserrat", sans-serif; }
 
 .style__title9___yVVKT {
   color: #fff;
@@ -5673,17 +5715,18 @@
   color: #fff;
   font-size: 30px;
   line-height: 30px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Montserrat", sans-serif; }
 
 .style__title6___gJEtW {
   color: #000;
   font-size: 17px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  opacity: .5; }
 
 .style__title7___sOUO- {
   color: #fff;
   font-size: 17px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Montserrat", sans-serif; }
 
 .style__title9___1DHh9 {
   color: #fff;
@@ -5891,17 +5934,18 @@
   color: #fff;
   font-size: 30px;
   line-height: 30px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Montserrat", sans-serif; }
 
 .style__title6___x4Dos {
   color: #000;
   font-size: 17px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  opacity: .5; }
 
 .style__title7___1syvz {
   color: #fff;
   font-size: 17px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Montserrat", sans-serif; }
 
 .style__title9___25QVV {
   color: #fff;
