@@ -142,3 +142,20 @@
   @extend .iconBase1;
   @include sprite($sprites-Focus-CallCenter);
 }
+
+// apoyo logistico > infraesctructura
+
+.icon26 {
+  @extend .iconBase2;
+  @include sprite($sprites-Focus-Equipo);
+}
+
+.icon27 {
+  @extend .iconBase2;
+  @include sprite($sprites-Focus-Operacion);
+}
+
+.icon28 {
+  @extend .iconBase2;
+  @include sprite($sprites-Focus-tecnologia);
+}
