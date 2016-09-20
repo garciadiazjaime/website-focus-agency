@@ -15,10 +15,7 @@ export default class Block4 extends React.Component {
       return data.map((item, index) => {
         const divStyle = getImageBackground(item.image);
         const className = index === 0 ? 'active' : '';
-        return (<div className={'item ' + (style.item || '') + ' ' + className} key={index} style={divStyle}>
-          <div className="container-fluid">
-          </div>
-        </div>);
+        return (<div className={'item ' + (style.item || '') + ' ' + className} key={index} style={divStyle}/>);
       });
     }
     return null;
