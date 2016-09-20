@@ -18,3 +18,22 @@
     top: 8px;
   }
 }
+
+.list2 {
+  list-style: none;
+  padding:0;
+  margin:0;
+
+  li {
+    padding: 8px 0;
+    text-indent: -25px;
+  }
+
+  li:before {
+    content: "• ";
+    color: $color2;
+    font-size: $title;
+    position: relative;
+    top: 8px;
+  }
+}

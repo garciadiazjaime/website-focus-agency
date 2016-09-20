@@ -1,3 +1,27 @@
-.block4 {
+@import '../../../../theme/constants';
+@import '../../../../theme/titles/titles';
+@import '../../../../theme/lists/lists';
 
+.block4 {
+  padding: $padding1;
+
+  // carousel
+
+  .item {
+    height: 330px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #fff;
+  }
+
+  .controls {
+    background-image: none;
+    top: 50%;
+
+    svg {
+      polyline {
+        stroke: $white;
+      }
+    }
+  }
 }

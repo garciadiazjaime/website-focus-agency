@@ -87,7 +87,6 @@
     "sendgrid": "^2.0.0",
     "sntp": "^2.0.0",
     "source-map": "^0.5.3",
-    "sprity": "^1.0.8",
     "strict-uri-encode": "^1.1.0",
     "webpack-sources": "^0.1.0",
     "when": "^3.7.7"

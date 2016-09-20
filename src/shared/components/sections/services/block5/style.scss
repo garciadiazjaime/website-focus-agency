@@ -1,3 +1,12 @@
-.block5 {
+@import '../../../../theme/constants';
+@import '../../../../theme/titles/titles';
+@import '../../../../theme/lists/lists';
+@import '../../../../theme/icons/icons';
 
+.block5 {
+  padding: $padding1;
+
+  .title8 {
+    padding-top: 20px;
+  }
 }
