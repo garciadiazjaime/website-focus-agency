@@ -1,3 +1,24 @@
-.block3 {
+@import '../../../../theme/constants';
+@import '../../../../theme/titles/titles';
+@import '../../../../theme/icons/icons';
+@import '../../../../theme/lists/lists';
 
+.block3 {
+  padding: $padding1;
+  background-color: $color4;
+
+  .iconWrapper {
+    min-height: 500px;
+  }
+
+  .icon25 {
+    top: 28%;
+    left: 33%;
+  }
+
+  .title8 {
+    width: 100%;
+    text-align: center;
+    margin-top: 60%;
+  }
 }

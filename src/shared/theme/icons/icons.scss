@@ -139,6 +139,6 @@
 }
 
 .icon25 {
-  @extend .iconBase2;
+  @extend .iconBase1;
   @include sprite($sprites-Focus-CallCenter);
 }
