@@ -5,6 +5,10 @@
   @extend .icon-sprites;
 }
 
+.iconBase2 {
+  @extend .icon-sprites;
+}
+
 .icon1 {
   @extend .iconBase1;
   @include sprite($sprites-pregunta);
@@ -100,4 +104,41 @@
 .icon17 {
   @extend .iconBase1;
   @include sprite($sprites-icono-entrega);
+}
+
+// apoyo logistico > servicios
+
+.icon19 {
+  @extend .iconBase2;
+  @include sprite($sprites-Focus-Aforos);
+}
+
+.icon20 {
+  @extend .iconBase2;
+  @include sprite($sprites-Focus-Censos);
+}
+
+.icon21 {
+  @extend .iconBase2;
+  @include sprite($sprites-Focus-Encuestas);
+}
+
+.icon22 {
+  @extend .iconBase2;
+  @include sprite($sprites-Focus-EncuestasTel);
+}
+
+.icon23 {
+  @extend .iconBase2;
+  @include sprite($sprites-Focus-Mystery);
+}
+
+.icon24 {
+  @extend .iconBase2;
+  @include sprite($sprites-Focus-Pruebas-productos);
+}
+
+.icon25 {
+  @extend .iconBase2;
+  @include sprite($sprites-Focus-CallCenter);
 }
