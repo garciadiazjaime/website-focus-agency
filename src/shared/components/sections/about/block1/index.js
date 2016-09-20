@@ -1,18 +1,14 @@
 import React from 'react';
-import SVG from '../../../svg';
+import CommonBlock1 from '../../../blocks/block1';
 const style = require('./style.scss');
 
 export default class Block1 extends React.Component {
   render() {
     return (<div className={style.block1}>
-      <div className={style.icon2} />
-      <div className={style.title5}>
-        CÁMARA GESELL Y <br />
+      <CommonBlock1 image="/images/focus-groups/Focus-FocusGroups-cover.png" icon={style.icon2}>
+        CÁMARA GESELL Y <br />
         FOCUS GROUPS
-      </div>
-      <div className={style.icon4}>
-        <SVG network="arrow_down" />
-      </div>
+      </CommonBlock1>
     </div>);
   }
 }

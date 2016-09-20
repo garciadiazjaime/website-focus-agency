@@ -15,11 +15,11 @@ export default {
     }, {
       title: 'Apoyo Logístico',
       url: '/apoyo-logistico',
-      component: AboutSection,
+      component: ServicesSection,
     }, {
       title: 'Focus Groups',
       url: '/focus-groups',
-      component: ServicesSection,
+      component: AboutSection,
     }],
   },
   icons: [{
