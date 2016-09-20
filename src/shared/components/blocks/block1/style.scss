@@ -1,0 +1,37 @@
+@import '../../../theme/constants';
+@import '../../../theme/titles/titles';
+@import '../../../theme/icons/icons';
+
+.block1 {
+  background-size: cover;
+  min-height: 780px;
+  background-repeat: no-repeat;
+
+  .icon {
+    top: 400px;
+    left: 44%;
+  }
+
+  .title5 {
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    padding-top: 450px;
+    line-height: $title;
+  }
+
+  .icon4 {
+    padding-top: 100px;
+    text-align: center;
+
+    svg {
+      width: 40px;
+      height: 40px;
+
+      polyline {
+        stroke: $color2;
+        stroke-width: 1px;
+      }
+    }
+  }
+}
