@@ -5,7 +5,7 @@
 .title1 {
   color: $color2;
   font-size: $title;
-  font-family: $fontA;
+  font-family: $font1;
   font-weight: $semibold;
 }
 
@@ -43,6 +43,12 @@
   font-weight: $semibold;
 }
 
+.title11 {
+  color: $black;
+  font-size: $normal;
+  font-family: $font2;
+  opacity: .75;
+}
 
 // Font: Montserrat
 
