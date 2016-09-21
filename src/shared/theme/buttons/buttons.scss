@@ -42,4 +42,8 @@
       stroke: $color1;
     }
   }
+  &:hover {
+    color: $white;
+    background: lighten($color2, 5%);
+  }
 }

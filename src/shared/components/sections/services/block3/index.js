@@ -17,7 +17,7 @@ export default class Block3 extends React.Component {
             </div>
           </div>
           <div className="col-sm-6">
-            <ul className={style.title6 + ' ' + style.list2}>
+            <ul className={style.title11 + ' ' + style.list2}>
               <li>
                 200 estaciones dumb WYSE con tecnología Quancept (CATI)
               </li>

@@ -36,7 +36,7 @@ export default class Block4 extends React.Component {
             <div className={style.title8}>
               INFRAESTRUCTURA
             </div>
-            <ul className={style.list2 + ' ' + style.title6}>
+            <ul className={style.list2 + ' ' + style.title11}>
               <li>
                 Sala de capacitación para estudios
               </li>
