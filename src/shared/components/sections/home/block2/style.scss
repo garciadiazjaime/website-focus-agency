@@ -8,7 +8,7 @@
   .image {
     height: 512px;
 
-    @media#{$isPhone}{
+    @media#{$isPhone} {
       margin-bottom: 15px;
     }
   }
@@ -17,7 +17,7 @@
     top: 35%;
     left: 35%;
 
-    @media#{$isPhone}{
+    @media#{$isPhone} {
       left: 27%;
     }
   }

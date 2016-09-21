@@ -8,6 +8,10 @@
   li {
     padding: 8px 0;
     text-indent: -25px;
+
+    @media#{$isPhone}{
+      margin: 0 15px;
+    }
   }
 
   li:before {
