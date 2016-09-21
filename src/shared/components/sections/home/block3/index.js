@@ -16,10 +16,13 @@ export default class Block3 extends React.Component {
             <div className={style.description + ' ' + style.title6}>
               Para mayor información acerca de nuestros servicios,
               preguntas o comentarios favor de llenar la siguiente forma
+              <br /><br />
             </div>
           </div>
           <div className="col-sm-6">
-            <Form />
+            <div className="row">
+              <Form />
+            </div>
           </div>
         </div>
       </div>

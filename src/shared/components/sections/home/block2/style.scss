@@ -1,24 +1,23 @@
 @import '../../../../theme/constants';
 @import '../../../../theme/icons/icons';
+@import '../../../../theme/titles/titles';
 
 .block2 {
   padding: $padding1;
 
-  .title {
-    color: $color2;
-    font-size: $subtitle;
-    font-family: $font1;
-    width: 100%;
-    text-align: center;
-    top: 50%;
-    position: absolute;
-    line-height: $subtitle;
+  .image {
+    height: 610px;
   }
 
-  .iconBase1 {
-    margin-top: 200px;
-    top: -10%;
-    left: 37%;
+  .icon2, .icon3 {
+    top: 35%;
+    left: 35%;
+  }
+
+  .title10 {
+    width: 100%;
+    text-align: center;
+    padding-top: 310px;
   }
 
   .icon4 {

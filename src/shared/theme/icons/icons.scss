@@ -1,8 +1,8 @@
 @import '../constants';
 
 .iconBase1 {
-  @extend .vCenter;
   @extend .icon-sprites;
+  @extend .vCenter;
 }
 
 .iconBase2 {
@@ -10,7 +10,7 @@
 }
 
 .icon1 {
-  @extend .iconBase1;
+  @extend .iconBase2;
   @include sprite($sprites-pregunta);
 }
 
