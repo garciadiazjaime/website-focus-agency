@@ -40,22 +40,22 @@ export default class Form1 extends React.Component {
   getInitialFormState() {
     return {
       name: {
-        title: 'Nombre',
+        title: 'Nombre *',
         value: '',
         require: true,
       },
       email: {
-        title: 'Correo Electrónico',
+        title: 'Correo Electrónico *',
         value: '',
         require: true,
       },
       tel: {
-        title: 'Empresa',
+        title: 'Empresa *',
         value: '',
         require: true,
       },
       message: {
-        title: 'Mensaje',
+        title: 'Mensaje *',
         value: '',
         require: true,
       },
@@ -130,7 +130,7 @@ export default class Form1 extends React.Component {
     } else {
       msgElement.addClass(style.errorCSSClass);
     }
-    msgElement.html(!isFormValid ? 'Favor de llenar los campos en rojo.' : '');
+    msgElement.html(!isFormValid ? 'Favor de llenar todos los campos.' : '');
   }
 
   render() {
@@ -138,43 +138,35 @@ export default class Form1 extends React.Component {
 
     return (<form id="form" className={style.form + ' form-horizontal'}>
         <div className={'form-group ' + style.formGroup}>
-          <div className="col-xs-10">
+          <div className="col-sm-12">
             <input type="text" name="name" onChange={this.onChangeHandler} value={name.value} placeholder={name.title} />
           </div>
           <div className={style.borderBottom2}></div>
         </div>
 
         <div className={'form-group ' + style.formGroup}>
-          <div className="col-xs-10">
+          <div className="col-sm-12">
             <input type="tel" name="tel" onChange={this.onChangeHandler} value={tel.value} placeholder={tel.title} />
           </div>
           <div className={style.borderBottom2}></div>
         </div>
 
         <div className={'form-group ' + style.formGroup}>
-          <div className="col-xs-10">
+          <div className="col-sm-12">
             <input type="text" name="email" onChange={this.onChangeHandler} value={email.value} placeholder={email.title} />
           </div>
           <div className={style.borderBottom2}></div>
         </div>
 
         <div className={'form-group ' + style.formGroup}>
-          <div className="col-xs-10">
+          <div className="col-sm-12">
             <textarea type="text" name="message" onChange={this.onChangeHandler} value={message.value} placeholder={message.title} />
           </div>
           <div className={style.borderBottom2}></div>
         </div>
 
-        <div><span id="msg"></span></div>
-        <div>
-          {
-            this.state.showLoading ?
-              (<span className={style.loader}>Cargando</span>)
-              : null
-          }
-        </div>
         <div className={'form-group ' + style.formGroup}>
-          <div className="col-xs-10">
+          <div className="col-sm-12">
             <div className="pull-right">
               <a className={style.submit} onClick={this.submitFormHandler}>
                 ENVIAR
@@ -182,6 +174,15 @@ export default class Form1 extends React.Component {
               </a>
             </div>
           </div>
+        </div>
+
+        <div className="col-sm-12"><span id="msg"></span></div>
+        <div>
+          {
+            this.state.showLoading ?
+              (<span className={style.loader}>Cargando</span>)
+              : null
+          }
         </div>
       </form>
     );
