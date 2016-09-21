@@ -15,7 +15,7 @@ export default class Block5 extends React.Component {
             <div className={style.title8}>
               EQUIPO
             </div>
-            <ul className={style.list2 + ' ' + style.title6}>
+            <ul className={style.list2 + ' ' + style.title11}>
               <li>
                 Encuestadores debidamente identificados con chaleco y gafete.
               </li>
@@ -35,7 +35,7 @@ export default class Block5 extends React.Component {
             <div className={style.title8}>
               TECNOLOGÍA
             </div>
-            <ul className={style.list2 + ' ' + style.title6}>
+            <ul className={style.list2 + ' ' + style.title11}>
               <li>
                 Realizamos el levantamiento tradicional de encuestas y tablets
               </li>
@@ -52,7 +52,7 @@ export default class Block5 extends React.Component {
             <div className={style.title8}>
               OPERACIÓN
             </div>
-            <ul className={style.list2 + ' ' + style.title6}>
+            <ul className={style.list2 + ' ' + style.title11}>
               <li>
                 Diseñamos cuestionarios y manuales de los mismos.
               </li>

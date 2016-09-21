@@ -28,12 +28,12 @@ export default class Block7 extends React.Component {
               <p>
                 Contamos con amplio estacionamiento.
               </p>
-              <div className={style.cta}>
-                <a className={style.button1} onClick={this.submitFormHandler}>
-                  VER EN GOOGLE MAPS
-                  <SVG network="arrow_right" className={style.svg}/>
-                </a>
-              </div>
+            </div>
+            <div className={style.cta}>
+              <a className={style.button1} onClick={this.submitFormHandler}>
+                VER EN GOOGLE MAPS
+                <SVG network="arrow_right" className={style.svg}/>
+              </a>
             </div>
           </div>
           <div className="col-sm-8">
