@@ -34,7 +34,7 @@ export default class Block4 extends React.Component {
     return (<div className={style.block4}>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-sm-8">
+          <div className="col-sm-7 col-md-8">
             <div className={style.title1}>
               RENTA DE <br />CÁMARA DE GESELL
             </div>
@@ -43,7 +43,7 @@ export default class Block4 extends React.Component {
               de focus groups.
             </div>
           </div>
-          <div className="col-sm-4">
+          <div className="col-sm-5 col-md-4">
             <div className={style.icon18} />
             <div className={style.title6}>
               <p>

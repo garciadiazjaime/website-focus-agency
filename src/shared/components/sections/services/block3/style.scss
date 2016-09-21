@@ -18,6 +18,11 @@
   .icon25 {
     top: 28%;
     left: 33%;
+
+    @media#{$isTablet} {
+      top: 25%;
+      left: 27%;
+    }
   }
 
   .title8 {
@@ -27,6 +32,10 @@
 
     @media#{$isPhone} {
       margin-top: inherit;
+    }
+
+    @media#{$isTablet} {
+      margin-top: 70%;
     }
   }
 }

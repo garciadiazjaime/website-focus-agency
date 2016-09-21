@@ -9,7 +9,7 @@ export default class Block7 extends React.Component {
     return (<div className={style.block7}>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-sm-4">
+          <div className="col-sm-5 col-md-4">
             <div className={style.title8}>
               UBICACIÓN
             </div>
@@ -36,7 +36,7 @@ export default class Block7 extends React.Component {
               </a>
             </div>
           </div>
-          <div className="col-sm-8">
+          <div className="col-sm-7 col-md-8">
             <img src="/images/focus-groups/Focus-Mapa.jpg" className="img-responsive" />
           </div>
         </div>
