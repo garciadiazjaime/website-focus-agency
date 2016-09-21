@@ -177,11 +177,9 @@ export default class Form1 extends React.Component {
         </div>
 
         <div className="col-sm-12"><span id="msg"></span></div>
-        <div>
+        <div className="col-sm-12">
           {
-            this.state.showLoading ?
-              (<span className={style.loader}>Cargando</span>)
-              : null
+            this.state.showLoading ? (<span className={style.loader}>Enviando</span>) : null
           }
         </div>
       </form>
