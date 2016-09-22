@@ -17,7 +17,7 @@ export default class Block4 extends React.Component {
         <div className="row">
           <div className="col-sm-12">
             <div className={style.cta}>
-              <a className={style.button2} onClick={this.submitFormHandler}>
+              <a className={style.button2} href="http://www.focus.mx/" target="_blank">
                 VISITA NUESTRO SITIO
                 <SVG network="arrow_right" className={style.svg}/>
               </a>

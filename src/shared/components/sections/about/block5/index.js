@@ -53,7 +53,7 @@ export default class Block5 extends React.Component {
 
         <div className="row">
           <div className={style.cta}>
-            <a className={style.button2} onClick={this.submitFormHandler}>
+            <a className={style.button2} href="http://www.focus.mx/contacto" target="_blank">
               CONTÁCTANOS
               <SVG network="arrow_right" className={style.svg}/>
             </a>

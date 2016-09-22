@@ -25,7 +25,8 @@
   .title10 {
     width: 100%;
     text-align: center;
-    padding-top: 310px;
+    padding-top: 280px;
+    display: inline-block;
 
     @media#{$isPhone}{
       padding-top: 260px;
@@ -34,7 +35,7 @@
 
   .icon4 {
     position: absolute;
-    top: 70%;
+    top: 75%;
     left: 49%;
 
     @media#{$isTablet} {

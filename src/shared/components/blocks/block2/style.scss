@@ -1,7 +1,7 @@
 @import '../../../theme/constants';
 @import '../../../theme/titles/titles';
 
-.block6 {
+.block2 {
   padding: $padding2;
 
   // carousel
@@ -27,5 +27,15 @@
   // slider
   .slider {
     padding: $padding2;
+
+    svg {
+      position: relative;
+      top: -15px;
+      
+      polyline {
+        stroke: $color1;
+      }
+    }
   }
+
 }

@@ -2,7 +2,7 @@ body{
   font-family: 'opensans_regular', sans-serif;
 }
 
-a:hover {
+a:hover, a:visited {
   text-decoration: none;
 }
 

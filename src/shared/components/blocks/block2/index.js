@@ -1,6 +1,8 @@
 /* eslint max-len: [2, 500, 4] */
 import React from 'react';
 import _ from 'lodash';
+
+import SVG from '../../svg';
 import Slider from 'react-slick';
 
 const style = require('./style.scss');
@@ -20,10 +22,14 @@ export default class Block2 extends React.Component {
 
   render() {
     const { data } = this.props;
+    const prevArrow = (<div className={style.arrow}><SVG network="carousel_left" /></div>);
+    const nextArrow = (<div className={style.arrow}><SVG network="carousel_right" /></div>);
     const settings = {
-      dots: true,
+      arrows: true,
       infinite: true,
       speed: 500,
+      prevArrow,
+      nextArrow,
       responsive: [{
         breakpoint: 420,
         settings: {
@@ -50,7 +56,7 @@ export default class Block2 extends React.Component {
         },
       }],
     };
-    return (<div className={style.block6}>
+    return (<div className={style.block2}>
       <div className="container-fluid">
         <div className="row">
           <div className="col-sm-4">
