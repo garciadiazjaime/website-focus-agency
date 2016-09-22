@@ -45,7 +45,7 @@ export default class MainMenu extends React.Component {
                 <span className={'icon-bar ' + style.iconBar}></span>
                 <span className={'icon-bar ' + style.iconBar}></span>
               </button>
-              <Link className={style.navbarBrand + ' navbar-brand'} to="/" />
+              <Link className={style.navbarBrand + ' navbar-brand'} to="/" id="inicio" />
             </div>
 
             <div className={style.navbarCollapse + ' collapse navbar-collapse'} id='mainmenu'>
@@ -53,6 +53,9 @@ export default class MainMenu extends React.Component {
                 {this.getIcons(this.props.icons)}
               </ul>
               <ul className={style.navbarNav + ' nav navbar-nav'}>
+                <li>
+                  <a href="http://www.focus.mx/contacto" className={style.navbarNavAnchor} title="Contáctanos" target="_blank">Contáctanos</a>
+                </li>
                 {this.getItems(this.props.items)}
               </ul>
             </div>

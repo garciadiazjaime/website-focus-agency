@@ -1,13 +1,13 @@
 /* eslint max-len: [2, 600, 4] */
 let scropllInProgress = false;
 
-function getScrollTo(section, elementID) {
-  const topElements = ['inicio', 'nosotros', 'equipo', 'servicios', 'contacto'];
-  if (topElements.indexOf(elementID) !== -1 || section === 'contacto') {
-    return 0;
-  }
-  return $('#' + elementID).offset().top - 220;
-}
+// function getScrollTo(section, elementID) {
+//   const topElements = ['inicio', 'nosotros', 'equipo', 'servicios', 'contacto'];
+//   if (topElements.indexOf(elementID) !== -1 || section === 'contacto') {
+//     return 0;
+//   }
+//   return $('#' + elementID).offset().top - 220;
+// }
 
 export default (location) => {
   // todo: get topElements from sitemap and improve exceptions "elementID"
@@ -21,7 +21,7 @@ export default (location) => {
   }
   if ($('#' + elementID).length && !scropllInProgress) {
     scropllInProgress = true;
-    const scrollTo = getScrollTo(bits[1], elementID);
+    const scrollTo = 0; // getScrollTo(bits[1], elementID);
     const srolltime = 100;
     const rootTag = typeof document.body.scrollTop !== 'undefined' ? 'body' : 'html, body';
     $(rootTag).animate({

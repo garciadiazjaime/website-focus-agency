@@ -2,6 +2,8 @@
 
 import React from 'react';
 import _ from 'lodash';
+
+import Loader from '../../loader';
 import restClient from '../../../../../server/helpers/rest-client';
 const style = require('./style.scss');
 import SVG from '../../../svg';
@@ -179,7 +181,7 @@ export default class Form1 extends React.Component {
         <div className="col-sm-12"><span id="msg"></span></div>
         <div className="col-sm-12">
           {
-            this.state.showLoading ? (<span className={style.loader}>Enviando</span>) : null
+            this.state.showLoading ? (<Loader />) : null
           }
         </div>
       </form>
