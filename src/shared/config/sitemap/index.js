@@ -9,10 +9,6 @@ export default {
     component: AppHandler,
     default: HomeSection,
     children: [{
-      title: 'Contáctanos',
-      url: '/contacto',
-      component: HomeSection,
-    }, {
       title: 'Apoyo Logístico',
       url: '/apoyo-logistico',
       component: ServicesSection,

@@ -6,24 +6,41 @@
   padding: $padding1;
 
   .image {
-    height: 610px;
+    height: 512px;
+
+    @media#{$isPhone} {
+      margin-bottom: 15px;
+    }
   }
 
   .icon2, .icon3 {
     top: 35%;
     left: 35%;
+
+    @media#{$isPhone} {
+      left: 27%;
+    }
   }
 
   .title10 {
     width: 100%;
     text-align: center;
-    padding-top: 310px;
+    padding-top: 280px;
+    display: inline-block;
+
+    @media#{$isPhone}{
+      padding-top: 260px;
+    }
   }
 
   .icon4 {
     position: absolute;
-    top: 70%;
+    top: 75%;
     left: 49%;
+
+    @media#{$isTablet} {
+      top: 80%;
+    }
 
     svg {
       width: 20px;

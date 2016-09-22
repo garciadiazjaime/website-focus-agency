@@ -9,4 +9,10 @@
   .icon1 {
     margin: 0 auto;
   }
+
+  .title1 {
+    @media#{$isPhone} {
+      font-size: 30px;
+    }
+  }
 }

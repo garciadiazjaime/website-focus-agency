@@ -41,6 +41,10 @@
   font-size: $subtitle;
   font-family: $font2;
   font-weight: $semibold;
+
+  &:hover {
+    color: $color2;
+  }
 }
 
 .title11 {

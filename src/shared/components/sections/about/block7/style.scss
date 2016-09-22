@@ -8,6 +8,10 @@
   .title6 {
     padding-top: 23px;
 
+    @media#{$isPhone} {
+      margin-bottom: 20px;
+    }
+
     p {
       padding-top: 15px;
     }
@@ -17,12 +21,18 @@
     }
 
     svg {
-      left: 45px;
+      left: 15%;
 
       polyline {
         stroke: #fff;
         stroke-width: 1px;
       }
+    }
+  }
+
+  .button1 {
+    @media#{$isPhone} {
+      margin-bottom: 20px;
     }
   }
 }

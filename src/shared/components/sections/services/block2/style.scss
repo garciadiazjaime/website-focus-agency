@@ -19,6 +19,10 @@
 
   .item {
     padding: $padding1;
+
+    @media#{$isTablet} {
+      min-height: 280px;
+    }
   }
 
   i {

@@ -41,6 +41,14 @@ $hamburger-background: darken($white, 10%)!important;
   @extend .icon-sprites;
   @include sprite($sprites-brand);
   left: 0;
+
+  @media#{$isTablet} {
+    width: 100px;
+  }
+
+  @media#{$isPhone} {
+    width: 100px;
+  }
 }
 .toggleButton{
   @extend .vCenter;
@@ -87,7 +95,7 @@ $hamburger-background: darken($white, 10%)!important;
   text-transform: uppercase;
   @extend .vCenter;
   &:hover, &:focus {
-    color: $color2;
+    color: $color1;
     background-color: transparent!important;
   }
 }

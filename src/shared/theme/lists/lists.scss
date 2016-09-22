@@ -5,9 +5,17 @@
   padding:0;
   margin:0;
 
+  @media#{$isTablet} {
+    margin-left: 15px;
+  }
+
   li {
     padding: 8px 0;
     text-indent: -25px;
+
+    @media#{$isPhone} {
+      margin: 0 15px;
+    }
   }
 
   li:before {
@@ -23,6 +31,14 @@
   list-style: none;
   padding:0;
   margin:0;
+
+  @media#{$isPhone} {
+    margin: 0 15px;
+  }
+
+  @media#{$isTablet} {
+    margin-left: 15px;
+  }
 
   li {
     padding: 8px 0;
