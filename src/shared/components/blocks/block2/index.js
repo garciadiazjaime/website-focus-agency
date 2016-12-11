@@ -28,6 +28,8 @@ export default class Block2 extends React.Component {
       arrows: true,
       infinite: true,
       speed: 500,
+      autoplay: true,
+      autoplaySpeed: 7000,
       prevArrow,
       nextArrow,
       responsive: [{

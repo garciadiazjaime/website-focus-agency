@@ -31,3 +31,10 @@ export default (location) => {
     });
   }
 };
+
+export function autoScrollTo(sectionId) {
+  const scrollTo = $('#' + sectionId).offset().top - 220;
+  $('body').animate({
+    scrollTop: scrollTo,
+  }, 1000);
+}

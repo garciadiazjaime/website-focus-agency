@@ -54,7 +54,9 @@ export default class MainMenu extends React.Component {
               </ul>
               <ul className={style.navbarNav + ' nav navbar-nav'}>
                 <li>
-                  <a href="http://www.focus.mx/contacto" className={style.navbarNavAnchor} title="Contáctanos" target="_blank">Contáctanos</a>
+                  <a href="/contacto" onClick={this.props.onClickContact} className={style.navbarNavAnchor} title="Contáctanos" target="_blank">
+                    Contáctanos
+                  </a>
                 </li>
                 {this.getItems(this.props.items)}
               </ul>

@@ -1,9 +1,10 @@
+/* eslint max-len: [2, 500, 4] */
 import React from 'react';
 
 import sitemap from '../config/sitemap';
 import MainMenu from './layout/menu/menu1';
 import Footer from './layout/footer/footer1';
-import scrollUtil from '../utils/scroll';
+import scrollUtil, { autoScrollTo } from '../utils/scroll';
 import menuUtil from '../utils/menu';
 
 
@@ -65,9 +66,16 @@ export default class AppHandler extends React.Component {
     }
   }
 
+  clickConctactHandler(event) {
+    const sectionId = 'form-contact';
+    event.preventDefault();
+    console.log('clickHandler');
+    autoScrollTo(sectionId);
+  }
+
   render() {
     return (<div>
-      <MainMenu items={sitemap.items.children} icons={sitemap.icons} onClick={this.clickHandler} />
+      <MainMenu items={sitemap.items.children} icons={sitemap.icons} onClick={this.clickHandler} onClickContact={this.clickConctactHandler} />
       {this.props.children}
       <Footer items={sitemap.items.children} addresses={sitemap.addresses} icons={sitemap.icons}/>
     </div>);
