@@ -41,14 +41,6 @@ $hamburger-background: darken($white, 10%)!important;
   @extend .icon-sprites;
   @include sprite($sprites-brand);
   left: 0;
-
-  @media#{$isTablet} {
-    width: 100px;
-  }
-
-  @media#{$isPhone} {
-    width: 100px;
-  }
 }
 .toggleButton{
   @extend .vCenter;
@@ -117,30 +109,30 @@ $hamburger-background: darken($white, 10%)!important;
       @extend .vCenterRel;
       svg {
         position: relative;
-        circle{
-          fill: $sm-background;
-        }
-        path{
-          fill: $sm-color;
-        }
       }
       .facebook{
+        circle {
+          fill: #3b5998;
+        }
+        path {
+          fill: #fff;
+        }
         &:hover{
           circle {
-            fill: #3b5998;
-          }
-          path {
-            fill: #fff;
+            fill: #2466cc;
           }
         }
       }
       .twitter{
+        circle {
+          fill: #55acee;
+        }
+        path {
+          fill: #fff;
+        }
         &:hover{
           circle {
-            fill: #55acee;
-          }
-          path {
-            fill: #fff;
+            fill: #7cc5eb;
           }
         }
       }

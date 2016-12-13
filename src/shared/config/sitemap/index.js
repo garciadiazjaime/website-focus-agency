@@ -20,9 +20,11 @@ export default {
   },
   icons: [{
     title: 'facebook',
+    className: 'facebook',
     url: 'https://www.facebook.com/',
   }, {
     title: 'twitter',
+    className: 'twitter',
     url: 'https://www.twitter.com/',
   }],
   addresses: [{
