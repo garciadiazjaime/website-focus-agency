@@ -11,13 +11,13 @@ export default {
       icon: style.icon20,
       text: 'Censos Comerciales',
     }, {
-      icon: style.icon21,
+      icon: style.icon22,
       text: 'Encuestas Telefónicas',
     }],
   },
   data2: {
     items: [{
-      icon: style.icon22,
+      icon: style.icon21,
       text: 'Levantamiento de Encuestas',
     }, {
       icon: style.icon23,

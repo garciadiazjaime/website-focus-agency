@@ -4,7 +4,8 @@ var config = convict({
     email: {
       doc: 'default contact email',
       format: String,
-      default: 'info@mintitmedia.com'
+      default: 'info@mintitmedia.com',
+      env: 'FOCUS_AGENCY_EMAIL'
     },
     ipaddress: {
         doc: 'IP the application runs on',

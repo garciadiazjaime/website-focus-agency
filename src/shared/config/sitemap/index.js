@@ -20,10 +20,12 @@ export default {
   },
   icons: [{
     title: 'facebook',
-    url: 'https://www.facebook.com/',
+    className: 'facebook',
+    url: 'https://www.facebook.com/FocusInvestigacion',
   }, {
     title: 'twitter',
-    url: 'https://www.twitter.com/',
+    className: 'twitter',
+    url: 'https://twitter.com/@focus_bc/',
   }],
   addresses: [{
     title: 'Tijuana',
