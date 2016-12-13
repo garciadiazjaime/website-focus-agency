@@ -21,11 +21,11 @@ export default {
   icons: [{
     title: 'facebook',
     className: 'facebook',
-    url: 'https://www.facebook.com/',
+    url: 'https://www.facebook.com/FocusInvestigacion',
   }, {
     title: 'twitter',
     className: 'twitter',
-    url: 'https://www.twitter.com/',
+    url: 'https://twitter.com/@focus_bc/',
   }],
   addresses: [{
     title: 'Tijuana',
