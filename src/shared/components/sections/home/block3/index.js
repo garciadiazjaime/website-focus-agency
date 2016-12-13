@@ -21,7 +21,9 @@ export default class Block3 extends React.Component {
           </div>
           <div className="col-sm-6">
             <div className="row">
-              <Form />
+              <div id="form-contact">
+                <Form />
+              </div>
             </div>
           </div>
         </div>

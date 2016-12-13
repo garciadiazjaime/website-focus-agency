@@ -2,7 +2,7 @@ body{
   font-family: 'opensans_regular', sans-serif;
 }
 
-a:hover {
+a:hover, a:visited {
   text-decoration: none;
 }
 
@@ -14,4 +14,11 @@ a:hover {
 
 #app{
 	overflow: hidden;
+}
+
+#mainmenu li.active a{
+  color: #00CB86;
+  border-left-color: #00CB86;
+  border-right-color: #00CB86;
+  z-index: 1000;
 }

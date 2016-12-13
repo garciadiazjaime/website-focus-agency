@@ -49,7 +49,7 @@ export default class Block4 extends React.Component {
             </ul>
           </div>
           <div className="col-sm-7 col-md-8">
-            <Carousel id="carousel-section3-block4" interval={80000} indicators={false} classes={carouselClasses}>
+            <Carousel id="carousel-section3-block4" interval={7000} indicators={false} classes={carouselClasses}>
               {this.renderItems(carouselData)}
             </Carousel>
           </div>
