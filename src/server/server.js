@@ -24,6 +24,11 @@ app.use(express.static('static'));
 
 app.use('/api/', apiRoutes);
 
+app.get('/health', function(req, res) {
+  res.writeHead(200);
+  res.end();
+});
+
 app.get('/*', function (req, res) {
   match({ routes, location: req.url }, (error, redirectLocation, renderProps) => {
     if (error) {
