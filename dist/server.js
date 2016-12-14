@@ -95,6 +95,11 @@
 
 	app.use('/api/', _api2.default);
 
+	app.get('/health', function (req, res) {
+	  res.writeHead(200);
+	  res.end();
+	});
+
 	app.get('/*', function (req, res) {
 	  (0, _reactRouter.match)({ routes: _routes2.default, location: req.url }, function (error, redirectLocation, renderProps) {
 	    if (error) {
@@ -230,7 +235,8 @@
 	    email: {
 	      doc: 'default contact email',
 	      format: String,
-	      default: 'info@mintitmedia.com'
+	      default: 'info@mintitmedia.com',
+	      env: 'FOCUS_AGENCY_EMAIL'
 	    },
 	    ipaddress: {
 	        doc: 'IP the application runs on',
@@ -596,10 +602,12 @@
 	  },
 	  icons: [{
 	    title: 'facebook',
-	    url: 'https://www.facebook.com/'
+	    className: 'facebook',
+	    url: 'https://www.facebook.com/FocusInvestigacion'
 	  }, {
 	    title: 'twitter',
-	    url: 'https://www.twitter.com/'
+	    className: 'twitter',
+	    url: 'https://twitter.com/@focus_bc/'
 	  }],
 	  addresses: [{
 	    title: 'Tijuana',
@@ -658,7 +666,8 @@
 
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* eslint max-len: [2, 500, 4] */
+
 
 	var AppHandler = function (_React$Component) {
 	  _inherits(AppHandler, _React$Component);
@@ -732,12 +741,20 @@
 	      }
 	    }
 	  }, {
+	    key: 'clickConctactHandler',
+	    value: function clickConctactHandler(event) {
+	      var sectionId = 'form-contact';
+	      event.preventDefault();
+	      console.log('clickHandler');
+	      (0, _scroll.autoScrollTo)(sectionId);
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        _react2.default.createElement(_menu2.default, { items: _sitemap2.default.items.children, icons: _sitemap2.default.icons, onClick: this.clickHandler }),
+	        _react2.default.createElement(_menu2.default, { items: _sitemap2.default.items.children, icons: _sitemap2.default.icons, onClick: this.clickHandler, onClickContact: this.clickConctactHandler }),
 	        this.props.children,
 	        _react2.default.createElement(_footer2.default, { items: _sitemap2.default.items.children, addresses: _sitemap2.default.addresses, icons: _sitemap2.default.icons })
 	      );
@@ -808,8 +825,8 @@
 	      var _this2 = this;
 
 	      return data.map(function (item, index) {
-	        var title = item.title;
-	        var url = item.url;
+	        var title = item.title,
+	            url = item.url;
 
 	        var elementID = url.replace('/', '');
 	        var className = style.navbarNavAnchor;
@@ -836,7 +853,7 @@
 	          _react2.default.createElement(
 	            _reactRouter.Link,
 	            { to: item.url, className: style.sm_icon, id: item.url, target: '_blank' },
-	            _react2.default.createElement(_svg2.default, { network: item.title, className: style[item.title] })
+	            _react2.default.createElement(_svg2.default, { network: item.title, className: style[item.className] })
 	          )
 	        );
 	      });
@@ -890,8 +907,8 @@
 	                    null,
 	                    _react2.default.createElement(
 	                      'a',
-	                      { href: 'http://www.focus.mx/contacto', className: style.navbarNavAnchor, title: 'Contáctanos', target: '_blank' },
-	                      'Contáctanos'
+	                      { href: '/contacto', onClick: this.props.onClickContact, className: style.navbarNavAnchor, title: 'Cont\xE1ctanos', target: '_blank' },
+	                      'Cont\xE1ctanos'
 	                    )
 	                  ),
 	                  this.getItems(this.props.items)
@@ -957,7 +974,7 @@
 	      /*eslint-disable */
 	      return _react2.default.createElement(
 	        'svg',
-	        { xmlns: 'http://www.w3.org/2000/svg', width: '30', height: '30', viewBox: '0 0 30 30', className: className },
+	        { xmlns: 'http://www.w3.org/2000/svg', width: '25', height: '25', viewBox: '0 0 30 30', className: className },
 	        _react2.default.createElement('circle', { cx: '15', cy: '15', r: '15' }),
 	        _react2.default.createElement('path', { d: 'M16.6 25.1v-9.2h3.2l0.5-3.6h-3.7v-2.3c0-1 0.3-1.7 1.9-1.7l2 0V5.1c-0.3 0-1.5-0.1-2.9-0.1 -2.9 0-4.8 1.7-4.8 4.7v2.6H9.5v3.6h3.2v9.2H16.6z' })
 	      );
@@ -965,7 +982,7 @@
 	    case 'twitter':
 	      return _react2.default.createElement(
 	        'svg',
-	        { xmlns: 'http://www.w3.org/2000/svg', width: '30', height: '30', viewBox: '0 0 30 30', className: className },
+	        { xmlns: 'http://www.w3.org/2000/svg', width: '25', height: '25', viewBox: '0 0 30 30', className: className },
 	        _react2.default.createElement('circle', { cx: '15', cy: '15', r: '15' }),
 	        _react2.default.createElement('path', { d: 'M23.5 9.7c-0.6 0.3-1.3 0.5-2 0.5 0.7-0.4 1.3-1.1 1.5-1.9 -0.7 0.4-1.4 0.7-2.2 0.8 -0.6-0.7-1.5-1.1-2.5-1.1 -1.9 0-3.5 1.6-3.5 3.5 0 0.3 0 0.5 0.1 0.8 -2.9-0.1-5.5-1.5-7.2-3.6 -0.3 0.5-0.5 1.1-0.5 1.8 0 1.2 0.6 2.3 1.6 2.9 -0.6 0-1.1-0.2-1.6-0.4 0 0 0 0 0 0 0 1.7 1.2 3.1 2.8 3.4 -0.3 0.1-0.6 0.1-0.9 0.1 -0.2 0-0.4 0-0.7-0.1 0.4 1.4 1.7 2.4 3.3 2.4 -1.2 0.9-2.7 1.5-4.3 1.5 -0.3 0-0.6 0-0.8 0 1.5 1 3.4 1.6 5.3 1.6 6.4 0 9.9-5.3 9.9-9.9 0-0.1 0-0.3 0-0.4C22.4 11 23 10.4 23.5 9.7z' })
 	      );
@@ -1220,18 +1237,18 @@
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'col-xs-12 col-sm-6' },
-	              'Todos los derechos reservados FOCUS Investigación de Mercados © 2016'
+	              'Todos los derechos reservados FOCUS Investigacio\u0301n de Mercados \xA9 2016'
 	            ),
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'col-xs-12 col-sm-6' },
-	              'Un proyecto de: ',
+	              'Un proyecto de:\xA0',
 	              _react2.default.createElement(
 	                'a',
 	                { href: data[0].url, title: data[0].title, target: '_blank' },
 	                data[0].name
 	              ),
-	              '   Código por: ',
+	              '\xA0\xA0 C\xF3digo por:\xA0',
 	              _react2.default.createElement(
 	                'a',
 	                { href: data[1].url, title: data[1].title, target: '_blank' },
@@ -1265,6 +1282,7 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+	exports.autoScrollTo = autoScrollTo;
 	/* eslint max-len: [2, 600, 4] */
 	var scropllInProgress = false;
 
@@ -1298,6 +1316,13 @@
 	    });
 	  }
 	};
+
+	function autoScrollTo(sectionId) {
+	  var scrollTo = $('#' + sectionId).offset().top - 220;
+	  $('body').animate({
+	    scrollTop: scrollTo
+	  }, 1000);
+	}
 
 /***/ },
 /* 24 */
@@ -1441,7 +1466,7 @@
 	              _react2.default.createElement(
 	                'div',
 	                { className: style.title1 },
-	                '¿Cómo podemos apoyarte en tu proyecto de investigación?'
+	                '\xBFCo\u0301mo podemos apoyarte en tu proyecto de investigacio\u0301n?'
 	              )
 	            )
 	          )
@@ -1555,8 +1580,8 @@
 	                  null,
 	                  _react2.default.createElement(
 	                    _reactRouter.Link,
-	                    { to: '/apoyo-logistico', title: 'APOYO LOGÍSTICO DE CAMPO', className: style.title10 },
-	                    'APOYO LOGÍSTICO ',
+	                    { to: '/apoyo-logistico', title: 'APOYO LOGI\u0301STICO DE CAMPO', className: style.title10 },
+	                    'APOYO LOGI\u0301STICO ',
 	                    _react2.default.createElement('br', null),
 	                    ' DE CAMPO'
 	                  )
@@ -1689,7 +1714,7 @@
 	              _react2.default.createElement(
 	                'div',
 	                { className: style.description + ' ' + style.title6 },
-	                'Para mayor información acerca de nuestros servicios, preguntas o comentarios favor de llenar la siguiente forma',
+	                'Para mayor informacio\u0301n acerca de nuestros servicios, preguntas o comentarios favor de llenar la siguiente forma',
 	                _react2.default.createElement('br', null),
 	                _react2.default.createElement('br', null)
 	              )
@@ -1700,7 +1725,11 @@
 	              _react2.default.createElement(
 	                'div',
 	                { className: 'row' },
-	                _react2.default.createElement(_form2.default, null)
+	                _react2.default.createElement(
+	                  'div',
+	                  { id: 'form-contact' },
+	                  _react2.default.createElement(_form2.default, null)
+	                )
 	              )
 	            )
 	          )
@@ -1779,9 +1808,9 @@
 	    key: 'onChangeHandler',
 	    value: function onChangeHandler(event) {
 	      var formData = this.state.formData;
-	      var _event$target = event.target;
-	      var name = _event$target.name;
-	      var value = _event$target.value;
+	      var _event$target = event.target,
+	          name = _event$target.name,
+	          value = _event$target.value;
 
 	      formData[name].value = value;
 	      this.setState({ formData: formData });
@@ -1904,11 +1933,11 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      var _state$formData = this.state.formData;
-	      var name = _state$formData.name;
-	      var email = _state$formData.email;
-	      var tel = _state$formData.tel;
-	      var message = _state$formData.message;
+	      var _state$formData = this.state.formData,
+	          name = _state$formData.name,
+	          email = _state$formData.email,
+	          tel = _state$formData.tel,
+	          message = _state$formData.message;
 
 
 	      return _react2.default.createElement(
@@ -2164,7 +2193,7 @@
 	              _react2.default.createElement(
 	                'div',
 	                { className: style.title5 },
-	                'Conoce más acerca de FOCUS Investigación de mercados'
+	                'Conoce ma\u0301s acerca de FOCUS Investigacio\u0301n de mercados'
 	              )
 	            )
 	          ),
@@ -2197,7 +2226,7 @@
 	                { className: style.title7 },
 	                'Tijuana',
 	                _react2.default.createElement('br', null),
-	                'Santa María #2841 Col. América Tijuana B.C. ',
+	                'Santa Mari\u0301a #2841 Col. Ame\u0301rica Tijuana B.C. ',
 	                _react2.default.createElement('br', null),
 	                '22044 (664) 634 2930 y (664) 634 2815 ',
 	                _react2.default.createElement('br', null),
@@ -2378,7 +2407,7 @@
 	        _react2.default.createElement(
 	          _block2.default,
 	          { image: '/images/focus-groups/Focus-FocusGroups-cover.png', icon: style.icon2 },
-	          'CÁMARA GESELL Y ',
+	          'CA\u0301MARA GESELL Y ',
 	          _react2.default.createElement('br', null),
 	          'FOCUS GROUPS'
 	        )
@@ -2435,10 +2464,10 @@
 	  _createClass(Block1, [{
 	    key: 'render',
 	    value: function render() {
-	      var _props = this.props;
-	      var image = _props.image;
-	      var icon = _props.icon;
-	      var children = _props.children;
+	      var _props = this.props,
+	          image = _props.image,
+	          icon = _props.icon,
+	          children = _props.children;
 
 	      var backgrounImage = (0, _imageUtil.getImageBackground)(image);
 	      return _react2.default.createElement(
@@ -2539,7 +2568,7 @@
 	              _react2.default.createElement(
 	                'div',
 	                { className: style.title8 },
-	                'Somos tus aliados en proyectos cualitativos, contamos con más de 18 años de experiencia, la mejor opción de cámara gesell en Tijuana y equipo de reclutamiento especializado en toda la región.'
+	                'Somos tus aliados en proyectos cualitativos, contamos con ma\u0301s de 18 an\u0303os de experiencia, la mejor opcio\u0301n de ca\u0301mara gesell en Tijuana y equipo de reclutamiento especializado en toda la regio\u0301n.'
 	              )
 	            )
 	          )
@@ -2634,7 +2663,7 @@
 	                  _react2.default.createElement(
 	                    'li',
 	                    null,
-	                    'Control interno de reclutados para evitar su participación frecuente.'
+	                    'Control interno de reclutados para evitar su participacio\u0301n frecuente.'
 	                  )
 	                )
 	              )
@@ -2645,7 +2674,7 @@
 	              _react2.default.createElement(
 	                'div',
 	                { className: style.title8 },
-	                'Coordinación Profesional del Proyecto'
+	                'Coordinacio\u0301n Profesional del Proyecto'
 	              ),
 	              _react2.default.createElement(
 	                'div',
@@ -2656,12 +2685,12 @@
 	                  _react2.default.createElement(
 	                    'li',
 	                    null,
-	                    'Asignamos un coordinador para la logística y seguimiento de tu proyecto. (Focus group , entrevistas y entnografías)'
+	                    'Asignamos un coordinador para la logi\u0301stica y seguimiento de tu proyecto. (Focus group , entrevistas y entnografi\u0301as)'
 	                  ),
 	                  _react2.default.createElement(
 	                    'li',
 	                    null,
-	                    'Podrás conocer el estatus de tu proyecto en todo momento.'
+	                    'Podra\u0301s conocer el estatus de tu proyecto en todo momento.'
 	                  ),
 	                  _react2.default.createElement(
 	                    'li',
@@ -2780,12 +2809,12 @@
 	                { className: style.title1 },
 	                'RENTA DE ',
 	                _react2.default.createElement('br', null),
-	                'CÁMARA DE GESELL'
+	                'CA\u0301MARA DE GESELL'
 	              ),
 	              _react2.default.createElement(
 	                'div',
 	                { className: style.title6 },
-	                'La cámara Gesell está completamente equipada para la realización de focus groups.'
+	                'La ca\u0301mara Gesell esta\u0301 completamente equipada para la realizacio\u0301n de focus groups.'
 	              )
 	            ),
 	            _react2.default.createElement(
@@ -2798,7 +2827,7 @@
 	                _react2.default.createElement(
 	                  'p',
 	                  null,
-	                  'Somos parte de la selección de Focus Vision, líder global en trasmisión en vivo de video de estudios cualitativos'
+	                  'Somos parte de la seleccio\u0301n de Focus Vision, li\u0301der global en trasmisio\u0301n en vivo de video de estudios cualitativos'
 	                )
 	              )
 	            )
@@ -2813,7 +2842,7 @@
 	              { className: 'col-sm-12' },
 	              _react2.default.createElement(
 	                _carousel2.default,
-	                { id: 'carousel-section2-block4', interval: 8000, indicators: false, classes: carouselClasses },
+	                { id: 'carousel-section2-block4', interval: 7000, indicators: false, classes: carouselClasses },
 	                this.renderItems(_data2.default)
 	              )
 	            )
@@ -2838,7 +2867,7 @@
 	  value: true
 	});
 
-	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -2899,10 +2928,10 @@
 	  }, {
 	    key: 'getControls',
 	    value: function getControls(sliderId, isVisible, classes) {
-	      var base = classes.base;
-	      var prev = classes.prev;
-	      var next = classes.next;
-	      var arrow = classes.arrow;
+	      var base = classes.base,
+	          prev = classes.prev,
+	          next = classes.next,
+	          arrow = classes.arrow;
 
 	      if (isVisible !== false) {
 	        return _react2.default.createElement(
@@ -2935,13 +2964,13 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      var _props = this.props;
-	      var id = _props.id;
-	      var interval = _props.interval;
-	      var children = _props.children;
-	      var indicators = _props.indicators;
-	      var controls = _props.controls;
-	      var classes = _props.classes;
+	      var _props = this.props,
+	          id = _props.id,
+	          interval = _props.interval,
+	          children = _props.children,
+	          indicators = _props.indicators,
+	          controls = _props.controls,
+	          classes = _props.classes;
 
 	      return _react2.default.createElement(
 	        'div',
@@ -3086,8 +3115,8 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      var data1 = _data2.default.data1;
-	      var data2 = _data2.default.data2;
+	      var data1 = _data2.default.data1,
+	          data2 = _data2.default.data2;
 
 	      return _react2.default.createElement(
 	        'div',
@@ -3136,7 +3165,7 @@
 	              _react2.default.createElement(
 	                'a',
 	                { className: style.button2, href: 'http://www.focus.mx/contacto', target: '_blank' },
-	                'CONTÁCTANOS',
+	                'CONTA\u0301CTANOS',
 	                _react2.default.createElement(_svg2.default, { network: 'arrow_right', className: style.svg })
 	              )
 	            )
@@ -3409,6 +3438,8 @@
 	        arrows: true,
 	        infinite: true,
 	        speed: 500,
+	        autoplay: true,
+	        autoplaySpeed: 7000,
 	        prevArrow: prevArrow,
 	        nextArrow: nextArrow,
 	        responsive: [{
@@ -3461,7 +3492,7 @@
 	              _react2.default.createElement(
 	                'div',
 	                { className: style.title8 },
-	                'Hemos colaborado con las mejores agencias de investigación de mercados a nivel nacional.'
+	                'Hemos colaborado con las mejores agencias de investigacio\u0301n de mercados a nivel nacional.'
 	              )
 	            )
 	          ),
@@ -3571,7 +3602,7 @@
 	              _react2.default.createElement(
 	                'div',
 	                { className: style.title8 },
-	                'UBICACIÓN'
+	                'UBICACIO\u0301N'
 	              ),
 	              _react2.default.createElement(
 	                'div',
@@ -3584,7 +3615,7 @@
 	                _react2.default.createElement(
 	                  'p',
 	                  null,
-	                  'Santa María #2841 Col. América Tijuana B.C. 22044'
+	                  'Santa Mari\u0301a #2841 Col. Ame\u0301rica Tijuana B.C. 22044'
 	                ),
 	                _react2.default.createElement(
 	                  'p',
@@ -3594,7 +3625,7 @@
 	                _react2.default.createElement(
 	                  'p',
 	                  null,
-	                  'Ubicación estratégica en la zona gastronómica, hotelera y financiera de Tijuana.'
+	                  'Ubicacio\u0301n estrate\u0301gica en la zona gastrono\u0301mica, hotelera y financiera de Tijuana.'
 	                ),
 	                _react2.default.createElement(
 	                  'p',
@@ -3777,7 +3808,7 @@
 	        _react2.default.createElement(
 	          _block2.default,
 	          { image: '/images/apoyo-logisitico/Focus-ApoyoLogistico-cover.png', icon: style.icon3 },
-	          'APOYO LOGÍSTICO ',
+	          'APOYO LOGI\u0301STICO ',
 	          _react2.default.createElement('br', null),
 	          'DE CAMPO'
 	        )
@@ -3855,8 +3886,8 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      var data1 = _data2.default.data1;
-	      var data2 = _data2.default.data2;
+	      var data1 = _data2.default.data1,
+	          data2 = _data2.default.data2;
 
 	      return _react2.default.createElement(
 	        'div',
@@ -3919,13 +3950,13 @@
 	      icon: style.icon20,
 	      text: 'Censos Comerciales'
 	    }, {
-	      icon: style.icon21,
+	      icon: style.icon22,
 	      text: 'Encuestas Telefónicas'
 	    }]
 	  },
 	  data2: {
 	    items: [{
-	      icon: style.icon22,
+	      icon: style.icon21,
 	      text: 'Levantamiento de Encuestas'
 	    }, {
 	      icon: style.icon23,
@@ -4014,12 +4045,12 @@
 	                _react2.default.createElement(
 	                  'li',
 	                  null,
-	                  '200 estaciones dumb WYSE con tecnología Quancept (CATI)'
+	                  '200 estaciones dumb WYSE con tecnologi\u0301a Quancept (CATI)'
 	                ),
 	                _react2.default.createElement(
 	                  'li',
 	                  null,
-	                  '24 estaciones para uso exclusivo de supervisión de los agentes con capacidad de monitoreo audio visual.'
+	                  '24 estaciones para uso exclusivo de supervisio\u0301n de los agentes con capacidad de monitoreo audio visual.'
 	                ),
 	                _react2.default.createElement(
 	                  'li',
@@ -4034,7 +4065,7 @@
 	                _react2.default.createElement(
 	                  'li',
 	                  null,
-	                  'CATI. Recolección de información a través de nuestra plataforma Quancept SPSS versión 7.9.'
+	                  'CATI. Recoleccio\u0301n de informacio\u0301n a trave\u0301s de nuestra plataforma Quancept SPSS versio\u0301n 7.9.'
 	                ),
 	                _react2.default.createElement(
 	                  'li',
@@ -4158,7 +4189,7 @@
 	                _react2.default.createElement(
 	                  'li',
 	                  null,
-	                  'Sala de capacitación para estudios'
+	                  'Sala de capacitacio\u0301n para estudios'
 	                ),
 	                _react2.default.createElement(
 	                  'li',
@@ -4168,7 +4199,7 @@
 	                _react2.default.createElement(
 	                  'li',
 	                  null,
-	                  'Amplias y cómodas instalaciones para el equipo de levantamiento.'
+	                  'Amplias y co\u0301modas instalaciones para el equipo de levantamiento.'
 	                )
 	              )
 	            ),
@@ -4177,7 +4208,7 @@
 	              { className: 'col-sm-7 col-md-8' },
 	              _react2.default.createElement(
 	                _carousel2.default,
-	                { id: 'carousel-section3-block4', interval: 80000, indicators: false, classes: carouselClasses },
+	                { id: 'carousel-section3-block4', interval: 7000, indicators: false, classes: carouselClasses },
 	                this.renderItems(_data2.default)
 	              )
 	            )
@@ -4294,7 +4325,7 @@
 	                _react2.default.createElement(
 	                  'li',
 	                  null,
-	                  'Contamos con un departamento de validación para el control y calidad de la información recabada.'
+	                  'Contamos con un departamento de validacio\u0301n para el control y calidad de la informacio\u0301n recabada.'
 	                ),
 	                _react2.default.createElement(
 	                  'li',
@@ -4310,7 +4341,7 @@
 	              _react2.default.createElement(
 	                'div',
 	                { className: style.title8 },
-	                'TECNOLOGÍA'
+	                'TECNOLOGI\u0301A'
 	              ),
 	              _react2.default.createElement(
 	                'ul',
@@ -4323,12 +4354,12 @@
 	                _react2.default.createElement(
 	                  'li',
 	                  null,
-	                  'Procesamos la información en el programa o sistema de su preferencia.'
+	                  'Procesamos la informacio\u0301n en el programa o sistema de su preferencia.'
 	                ),
 	                _react2.default.createElement(
 	                  'li',
 	                  null,
-	                  'Contamos con nuestro propio software PREVIA , con el podrás explorar toda la información.'
+	                  'Contamos con nuestro propio software PREVIA , con el podra\u0301s explorar toda la informacio\u0301n.'
 	                )
 	              )
 	            ),
@@ -4339,7 +4370,7 @@
 	              _react2.default.createElement(
 	                'div',
 	                { className: style.title8 },
-	                'OPERACIÓN'
+	                'OPERACIO\u0301N'
 	              ),
 	              _react2.default.createElement(
 	                'ul',
@@ -4347,32 +4378,32 @@
 	                _react2.default.createElement(
 	                  'li',
 	                  null,
-	                  'Diseñamos cuestionarios y manuales de los mismos.'
+	                  'Disen\u0303amos cuestionarios y manuales de los mismos.'
 	                ),
 	                _react2.default.createElement(
 	                  'li',
 	                  null,
-	                  'Desarrollamos propuestas que incluyan recolección de información en campo, tanto en aspectos técnicos como de presupuesto.'
+	                  'Desarrollamos propuestas que incluyan recoleccio\u0301n de informacio\u0301n en campo, tanto en aspectos te\u0301cnicos como de presupuesto.'
 	                ),
 	                _react2.default.createElement(
 	                  'li',
 	                  null,
-	                  'Realizamos cartografía para marcos muestrales e identificación de unidades seleccionadas para entrevistas.'
+	                  'Realizamos cartografi\u0301a para marcos muestrales e identificacio\u0301n de unidades seleccionadas para entrevistas.'
 	                ),
 	                _react2.default.createElement(
 	                  'li',
 	                  null,
-	                  'Realizamos georeferenciación de entrevistas en viviendas y establecimientos.'
+	                  'Realizamos georeferenciacio\u0301n de entrevistas en viviendas y establecimientos.'
 	                ),
 	                _react2.default.createElement(
 	                  'li',
 	                  null,
-	                  'Nos adecuados a tu metodología.'
+	                  'Nos adecuados a tu metodologi\u0301a.'
 	                ),
 	                _react2.default.createElement(
 	                  'li',
 	                  null,
-	                  'Podrás conocer el estatus de tu proyecto en todo momento.'
+	                  'Podra\u0301s conocer el estatus de tu proyecto en todo momento.'
 	                )
 	              )
 	            )
