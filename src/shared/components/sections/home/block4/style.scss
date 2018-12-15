@@ -1,0 +1,25 @@
+@import '../../../../theme/constants';
+@import '../../../../theme/titles/titles';
+@import '../../../../theme/buttons/buttons';
+
+.block4 {
+  padding: $padding1;
+  background: $color1;
+
+  .title5 {
+    text-align: center;
+    padding: 40px 0;
+    font-family: $font2;
+  }
+
+  .cta {
+    width: 100%;
+    text-align: center;
+  }
+
+  .title7 {
+    padding: 60px 0 20px;
+    width: 100%;
+    text-align: center;
+  }
+}

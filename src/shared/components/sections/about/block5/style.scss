@@ -1,0 +1,77 @@
+@import '../../../../theme/constants';
+@import '../../../../theme/titles/titles';
+@import '../../../../theme/icons/icons';
+@import '../../../../theme/buttons/buttons';
+
+
+.block5 {
+  background: $color1;
+  padding: $padding1;
+
+  @media#{$isPhone} {
+    i {
+      top: 40px;
+      position: relative;
+      left: 15%;
+    }
+  }
+
+  .content {
+    border-right: 1px solid $color2;
+    padding: 40px 0 0px;
+
+    @media#{$isPhone} {
+      border: none;
+      padding: inherit;
+    }
+  }
+
+  .content2 {
+    padding: 40px 0;
+
+    @media#{$isPhone} {
+      padding: inherit;
+    }
+  }
+
+  .title10 {
+    max-width: 400px;
+    min-height: 120px;
+    padding: 0 0 0 28px;
+
+    @media#{$isPhone} {
+      max-width: inherit;
+      min-height: inherit;
+      padding: 40px 0 0;
+    }
+  }
+
+  .item {
+    min-height: 150px;
+  }
+
+  i {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .cta {
+    margin: 75px 0 50px;
+    width: 100%;
+    text-align: center;
+
+    svg {
+      polyline {
+        stroke: $white;
+      }
+    }
+
+    &:hover {
+      svg {
+        polyline {
+          stroke: $color1;
+        }
+      }
+    }
+  }
+}

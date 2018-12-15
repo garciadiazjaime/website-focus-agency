@@ -1,0 +1,58 @@
+$sprites-Focus-Aforos: -490px -210px 170px 105px;
+$sprites-Focus-CallCenter: -0px -391px 170px 105px;
+$sprites-Focus-Censos: -170px -391px 170px 105px;
+$sprites-Focus-Encuestas: -320px -0px 170px 105px;
+$sprites-Focus-EncuestasTel: -320px -105px 170px 105px;
+$sprites-Focus-Equipo: -0px -286px 170px 105px;
+$sprites-Focus-Mystery: -170px -286px 170px 105px;
+$sprites-Focus-Operacion: -490px -0px 170px 105px;
+$sprites-Focus-Pruebas-productos: -490px -105px 170px 105px;
+$sprites-Focus-icon-apoyologistico: -0px -706px 140px 118px;
+$sprites-Focus-icon-focusgroups: -140px -706px 140px 118px;
+$sprites-Focus-icon-somos: -0px -100px 239px 119px;
+$sprites-Focus-tecnologia: -340px -391px 170px 105px;
+$sprites-brand: -492px -601px 240px 60px;
+$sprites-brand_old: -0px -0px 320px 100px;
+$sprites-focus-logo-focusvision: -0px -219px 277px 67px;
+$sprites-icono-areavidiro: -328px -496px 164px 105px;
+$sprites-icono-coffeebreak: -492px -496px 164px 105px;
+$sprites-icono-comodo: -660px -0px 164px 105px;
+$sprites-icono-entrega: -660px -105px 164px 105px;
+$sprites-icono-gesellmesa: -660px -210px 164px 105px;
+$sprites-icono-incentivos: -0px -496px 164px 105px;
+$sprites-icono-recepcion: -660px -420px 164px 105px;
+$sprites-icono-salaespera: -0px -601px 164px 105px;
+$sprites-icono-traduccion: -164px -601px 164px 105px;
+$sprites-icono-traduccion2: -328px -601px 164px 105px;
+$sprites-icono-transmisionvivo: -660px -315px 164px 105px;
+$sprites-icono-ubicacion: -164px -496px 164px 105px;
+$sprites-pregunta: -239px -100px 81px 93px;
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 3);
+}
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 4);
+}
+@function sprite-width($sprite) {
+   @return nth($sprite, 3);
+}
+@function sprite-height($sprite) {
+   @return nth($sprite, 4);
+}
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 1);
+  $sprite-offset-y: nth($sprite, 2);
+  background-position: $sprite-offset-x $sprite-offset-y;
+}
+@mixin sprite($sprite, $display: block) {
+   @include sprite-position($sprite);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: $display;
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+.icon-sprites {
+  background-image: url('/images/sprites/sprite-sprites.png');
+}

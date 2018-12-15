@@ -1,0 +1,31 @@
+@import '../../../../theme/constants';
+@import '../../../../theme/titles/titles';
+@import '../../../../theme/icons/icons';
+
+
+.block2 {
+  padding: $padding1;
+
+  .title1 {
+    padding: $padding1;
+    width: 100%;
+    text-align: center;
+  }
+
+  .title8 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .item {
+    padding: $padding1;
+
+    @media#{$isTablet} {
+      min-height: 280px;
+    }
+  }
+
+  i {
+    margin: 0 auto;
+  }
+}

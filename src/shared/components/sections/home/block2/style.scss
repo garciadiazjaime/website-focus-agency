@@ -1,0 +1,55 @@
+@import '../../../../theme/constants';
+@import '../../../../theme/icons/icons';
+@import '../../../../theme/titles/titles';
+
+.block2 {
+  padding: $padding1;
+
+  .image {
+    height: 512px;
+
+    @media#{$isPhone} {
+      margin-bottom: 15px;
+    }
+  }
+
+  .icon2, .icon3 {
+    top: 35%;
+    left: 35%;
+
+    @media#{$isPhone} {
+      left: 27%;
+    }
+  }
+
+  .title10 {
+    width: 100%;
+    text-align: center;
+    padding-top: 280px;
+    display: inline-block;
+
+    @media#{$isPhone}{
+      padding-top: 260px;
+    }
+  }
+
+  .icon4 {
+    position: absolute;
+    top: 75%;
+    left: 49%;
+
+    @media#{$isTablet} {
+      top: 80%;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+
+      polyline {
+        stroke: $color2;
+        stroke-width: 2;
+      }
+    }
+  }
+}

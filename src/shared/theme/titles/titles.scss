@@ -1,0 +1,63 @@
+@import "../constants";
+
+// Font: Open Sans
+
+.title1 {
+  color: $color2;
+  font-size: $title;
+  font-family: $font1;
+  font-weight: $semibold;
+}
+
+.title5 {
+  color: $white;
+  font-size: $subtitle;
+  line-height: $subtitle;
+  font-family: $font1;
+}
+
+.title6 {
+  color: $black;
+  font-size: $normal;
+  font-family: $font2;
+  opacity: .5;
+}
+
+.title7 {
+  color: $white;
+  font-size: $normal;
+  font-family: $font1;
+}
+
+.title9 {
+  color: $white;
+  font-size: $normal;
+  font-family: $font2;
+  line-height: $normal;
+}
+
+.title10 {
+  color: $color2;
+  font-size: $subtitle;
+  font-family: $font2;
+  font-weight: $semibold;
+
+  &:hover {
+    color: $color2;
+  }
+}
+
+.title11 {
+  color: $black;
+  font-size: $normal;
+  font-family: $font2;
+  opacity: .75;
+}
+
+// Font: Montserrat
+
+.title8 {
+  color: $color1;
+  font-size: $subtitle;
+  font-family: $font1;
+}
